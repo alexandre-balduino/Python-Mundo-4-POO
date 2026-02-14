@@ -11,20 +11,19 @@ ao funcionário se apresentar.
 from rich import print
 
 class Funcionario:
+    empresa = "Curso em Vídeo"
     def __init__(self, nome, setor, cargo):
         self.nome = nome
         self.setor = setor
         self.cargo = cargo
-        self.empresa = "Curso em Vídeo"
     
     
     def apresentar(self):
-        return f":wave: Olá, sou [blue] {self.nome}[/] e sou {self.cargo} do setor {self.setor} da empresa {self.empresa}"
+        return f":wave: Olá, sou [blue] {self.nome}[/] e sou {self.cargo} do setor {self.setor} da empresa {__class__.empresa}"
 
 
 maria = Funcionario("Maria", "Administração", "Diretora")
 pedro = Funcionario("Pedro", "TI", "Programador")
-alexandre = Funcionario("Alexandre", "Artesanato", "Fazedor de Terços")
 alexandre.empresa = "Terços da Imaculada"
 print(maria.apresentar())
 print(pedro.apresentar())
